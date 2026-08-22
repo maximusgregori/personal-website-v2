@@ -34,4 +34,4 @@ Before any prose, read `Vaults/Kronos/05 System/Skills/AI Writing Tells.md`. Fol
 
 ## Stack
 
-Next.js, Tailwind, shadcn/ui. Registries are in `components.json`.
+Not scaffolded yet. Do not add a framework until Max says so.
