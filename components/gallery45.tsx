@@ -3,31 +3,23 @@ import { cn } from "@/lib/utils";
 const SHOTS = [
   {
     href: "https://proteahq.com/",
-    src: "/chapters/protea-product.png",
-    title: "Autonomous healthcare technology delivery in Protea",
-    host: "app",
-    chrome: false,
-  },
-  {
-    href: "https://proteahq.com/",
-    src: "/chapters/protea-analytics.png",
-    title: "Predictive insights on procurement and deals",
-    host: "app",
-    chrome: false,
-  },
-  {
-    href: "https://proteahq.com/",
     src: "/chapters/protea-home.jpg",
-    title: "Website",
-    host: "proteahq.com",
-    chrome: true,
+    label: "proteahq.com",
   },
   {
     href: "https://proteahq.com/protea-ai",
     src: "/chapters/protea-ai.jpg",
-    title: "Protea AI",
-    host: "proteahq.com/protea-ai",
-    chrome: true,
+    label: "proteahq.com/protea-ai",
+  },
+  {
+    href: "https://proteahq.com/",
+    src: "/chapters/protea-product.png",
+    label: "One software for all healthcare technology delivery",
+  },
+  {
+    href: "https://proteahq.com/",
+    src: "/chapters/protea-analytics.png",
+    label: "Predictive insights on procurement and deals",
   },
 ] as const;
 
@@ -63,33 +55,27 @@ const Gallery45 = ({ className }: Props) => {
         <div className="@container">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {SHOTS.map((shot) => (
-              <figure key={shot.title} className="flex min-w-0 flex-col gap-3">
-                <a
-                  href={shot.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="overflow-hidden rounded-xl bg-glass backdrop-blur-xl inset-ring inset-ring-white/12"
-                >
-                  {shot.chrome ? (
-                    <div className="flex h-9 items-center gap-2 border-b border-white/12 px-3 font-sans text-sm text-muted-foreground">
-                      <span aria-hidden className="flex items-center gap-1.5">
-                        <span className="size-2 rounded-full bg-[#FF5F57]" />
-                        <span className="size-2 rounded-full bg-[#FEBC2E]" />
-                        <span className="size-2 rounded-full bg-[#28C840]" />
-                      </span>
-                      <span className="min-w-0 truncate">{shot.host}</span>
-                    </div>
-                  ) : null}
-                  <img
-                    src={shot.src}
-                    alt=""
-                    className="aspect-video w-full object-cover object-top outline-1 -outline-offset-1 outline-white/10"
-                  />
-                </a>
-                <figcaption className="px-1 font-sans text-base/7 text-muted-foreground sm:text-sm/6">
-                  {shot.title}
-                </figcaption>
-              </figure>
+              <a
+                key={shot.src}
+                href={shot.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="min-w-0 overflow-hidden rounded-xl bg-glass backdrop-blur-xl inset-ring inset-ring-white/12"
+              >
+                <div className="flex min-h-9 items-center gap-2 border-b border-white/12 px-3 py-2 font-sans text-sm text-muted-foreground">
+                  <span aria-hidden className="flex shrink-0 items-center gap-1.5">
+                    <span className="size-2 rounded-full bg-[#FF5F57]" />
+                    <span className="size-2 rounded-full bg-[#FEBC2E]" />
+                    <span className="size-2 rounded-full bg-[#28C840]" />
+                  </span>
+                  <span className="min-w-0 text-pretty">{shot.label}</span>
+                </div>
+                <img
+                  src={shot.src}
+                  alt=""
+                  className="aspect-video w-full object-cover object-top outline-1 -outline-offset-1 outline-white/10"
+                />
+              </a>
             ))}
           </div>
         </div>

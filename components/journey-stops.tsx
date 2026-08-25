@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useState, type UIEvent } from "react";
 
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { JOURNEY_STOPS } from "@/lib/journey";
 import { cn } from "@/lib/utils";
 
@@ -10,35 +9,24 @@ type Props = {
   className?: string;
 };
 
+const MASK_REST =
+  "linear-gradient(to bottom, #fff 0%, #fff calc(100% - 4rem), transparent)";
+const MASK_MID =
+  "linear-gradient(to bottom, transparent, #fff 1.75rem, #fff calc(100% - 4rem), transparent)";
+const MASK_END =
+  "linear-gradient(to bottom, transparent, #fff 1.75rem, #fff 100%)";
+
 const JourneyStops = ({ className }: Props) => {
-  const frameRef = useRef<HTMLDivElement>(null);
   const [atTop, setAtTop] = useState(true);
   const [atBottom, setAtBottom] = useState(false);
 
-  useEffect(() => {
-    const viewport = frameRef.current?.querySelector(
-      "[data-slot=scroll-area-viewport]"
-    );
-    if (!(viewport instanceof HTMLElement)) {
-      return;
-    }
-
-    const update = () => {
-      const { scrollTop, scrollHeight, clientHeight } = viewport;
-      setAtTop(scrollTop <= 1);
-      setAtBottom(scrollTop + clientHeight >= scrollHeight - 1);
-    };
-
-    update();
-    viewport.addEventListener("scroll", update, { passive: true });
-    return () => viewport.removeEventListener("scroll", update);
+  const onScroll = useCallback((event: UIEvent<HTMLDivElement>) => {
+    const { scrollTop, scrollHeight, clientHeight } = event.currentTarget;
+    setAtTop(scrollTop <= 1);
+    setAtBottom(scrollTop + clientHeight >= scrollHeight - 1);
   }, []);
 
-  const maskImage = atTop
-    ? "linear-gradient(to bottom, black 0%, black 88%, transparent)"
-    : atBottom
-      ? "linear-gradient(to bottom, transparent, black 12%, black 100%)"
-      : "linear-gradient(to bottom, transparent, black 10%, black 88%, transparent)";
+  const maskImage = atTop ? MASK_REST : atBottom ? MASK_END : MASK_MID;
 
   const list = (
     <ol role="list" className="min-w-0 list-none pr-3" aria-label="Places lived">
@@ -61,10 +49,19 @@ const JourneyStops = ({ className }: Props) => {
   return (
     <div className={cn(className)}>
       <div className="lg:hidden">{list}</div>
-      <div ref={frameRef} className="relative hidden h-[36rem] lg:block">
-        <ScrollArea className="h-full" style={{ maskImage, WebkitMaskImage: maskImage }}>
-          {list}
-        </ScrollArea>
+      <div
+        onScroll={onScroll}
+        className="hidden h-[36rem] overflow-y-auto overscroll-contain lg:block [scrollbar-width:thin] [scrollbar-color:rgba(255,255,255,0.28)_transparent]"
+        style={{
+          maskImage,
+          WebkitMaskImage: maskImage,
+          maskSize: "100% 100%",
+          WebkitMaskSize: "100% 100%",
+          maskRepeat: "no-repeat",
+          WebkitMaskRepeat: "no-repeat",
+        }}
+      >
+        {list}
       </div>
     </div>
   );
