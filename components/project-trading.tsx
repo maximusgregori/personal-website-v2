@@ -24,7 +24,7 @@ const ProjectTrading = ({ className }: Props) => {
           <p className="w-fit rounded-full border border-white/12 px-3.5 py-1.5 font-sans text-sm text-muted-foreground">
             02
           </p>
-          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:items-end lg:gap-16">
             <div className="flex min-w-0 flex-col gap-4">
               <h2 className="max-w-[20ch] text-4xl font-medium tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
                 Trading Bot
@@ -46,12 +46,6 @@ const ProjectTrading = ({ className }: Props) => {
                 drawdown circuit breakers, and per-market caps. It runs on EC2,
                 processing over 200 markets per cycle across 20 US cities, and
                 sends me performance reports.
-              </p>
-              <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
-                The system is fully operational. More useful to me is what I
-                learned building it. The gap between the hype and the reality
-                is significant, and the only way I could have known that was by
-                building the thing.
               </p>
             </div>
             <div className="flex min-w-0 flex-col gap-4">

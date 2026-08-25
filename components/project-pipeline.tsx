@@ -20,30 +20,23 @@ const ProjectPipeline = ({ className }: Props) => {
           <p className="w-fit rounded-full border border-white/12 px-3.5 py-1.5 font-sans text-sm text-muted-foreground">
             03
           </p>
-          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:items-end lg:gap-16">
             <div className="flex min-w-0 flex-col gap-4">
               <h2 className="max-w-[20ch] text-4xl font-medium tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
                 Creative Pipeline
               </h2>
               <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
                 AI-generated content was taking off, and most of the
-                conversation around it felt like hype. My girlfriend runs a
-                wellness brand with regular sponsorship offers, so I had a real
-                use case. Before building anything for her, I wanted to
-                understand every step myself.
+                conversation around it felt like hype. I wanted to understand
+                it from the ground up: not just the end product, but how you
+                actually get there. I took the process apart, figured out how
+                it was made, and rebuilt it myself.
               </p>
               <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
                 You give it a one-line premise. The system writes a
                 scene-by-scene script, produces voiceover per scene, generates
                 AI-animated clips, and assembles a finished video with
                 word-synced captions, ready to publish.
-              </p>
-              <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
-                Once I understood the pipeline, I adapted it for her brand. She
-                is producing and publishing AI-generated UGC at a pace that was
-                not realistic before. The value for me was a clear picture of
-                what AI content creation can actually do and where it falls
-                short.
               </p>
             </div>
             <ol className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-6">
