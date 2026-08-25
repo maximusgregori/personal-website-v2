@@ -27,7 +27,7 @@ const STEPS = [
   },
   {
     step: "05",
-    title: "Brand and site",
+    title: "Branding",
     detail:
       "As part of the expansion I rebuilt Integrity's branding: the website, brochures, and flyers.",
   },

@@ -14,7 +14,10 @@ type Props = {
 
 const ProjectBella = ({ className }: Props) => {
   return (
-    <section className={cn("scroll-mt-24 py-24 md:py-32", className)}>
+    <section
+      id="bella"
+      className={cn("scroll-mt-24 py-24 md:py-32", className)}
+    >
       <div className="flex w-full flex-col gap-10 px-6 lg:gap-12 lg:px-12">
         <p className="w-fit rounded-full border border-white/12 px-3.5 py-1.5 font-sans text-sm text-muted-foreground">
           01

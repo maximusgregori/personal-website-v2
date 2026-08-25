@@ -45,9 +45,9 @@ const Feature227 = ({ className }: Props) => {
               LotusFlare
             </h2>
             <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
-              I started in tech as a growth intern at LotusFlare, an AI-powered
-              digital commerce and monetization platform for global
-              telecommunications and media service providers.
+              I started in tech as a growth intern at LotusFlare in San Jose.
+              It is an AI-powered digital commerce and monetization platform
+              for global telecommunications and media service providers.
             </p>
           </div>
           <dl className="grid auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
