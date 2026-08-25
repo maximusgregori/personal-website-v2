@@ -1,5 +1,5 @@
 import { JourneyGlobe } from "@/components/journey-globe";
-import { JOURNEY_STOPS } from "@/lib/journey";
+import { JourneyStops } from "@/components/journey-stops";
 
 export const metadata = {
   title: "About · Max Gregori",
@@ -15,33 +15,40 @@ export default function AboutPage() {
           <h1 className="max-w-[20ch] text-4xl font-medium tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
             About
           </h1>
-          <div className="flex flex-col gap-4">
-            <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
-              A friend and I were in high school when we noticed that most web
-              design agencies wouldn't take on charities or small nonprofits.
-              The budgets were too small, the projects too simple. So these
-              organizations just went without, or scraped by with whatever they
-              could manage on their own. We didn't have much overhead. We were
-              teenagers. So we started building affordable websites for them
-              around New York City. It wasn't a grand plan, but it was the first
-              time I looked at a problem everyone else seemed to accept and
-              thought, "We could actually fix this."
-            </p>
-            <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
-              That instinct kept showing up. Growth roles at startups, two
-              summers in investment banking, a deep dive into healthcare IT
-              where I managed large-scale projects and built service lines from
-              scratch. The problems that pulled me in were never technical to
-              begin with. They were operational gaps with technical solutions.
-              What a business needed versus what it actually had the
-              infrastructure to do.
-            </p>
-            <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
-              When I'm not building, I'm watching Formula One. I picked that up
-              around four years old, watching races in my grandparents' basement
-              in Germany. Some things stay with you, no matter how often you
-              move.
-            </p>
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+            <div className="flex min-w-0 flex-col gap-4">
+              <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
+                A friend and I were in high school when we noticed that most web
+                design agencies wouldn't take on charities or small nonprofits.
+                The budgets were too small, the projects too simple. So these
+                organizations just went without, or scraped by with whatever they
+                could manage on their own. We didn't have much overhead. We were
+                teenagers. So we started building affordable websites for them
+                around New York City. It wasn't a grand plan, but it was the first
+                time I looked at a problem everyone else seemed to accept and
+                thought, "We could actually fix this."
+              </p>
+              <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
+                That instinct kept showing up. Growth roles at startups, two
+                summers in investment banking, a deep dive into healthcare IT
+                where I managed large-scale projects and built service lines from
+                scratch. The problems that pulled me in were never technical to
+                begin with. They were operational gaps with technical solutions.
+                What a business needed versus what it actually had the
+                infrastructure to do.
+              </p>
+              <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
+                When I'm not building, I'm watching Formula One. I picked that up
+                around four years old, watching races in my grandparents' basement
+                in Germany. Some things stay with you, no matter how often you
+                move.
+              </p>
+            </div>
+            <img
+              src="/about/headshot.webp"
+              alt="Max Gregori"
+              className="aspect-[3/4] w-full rounded-xl object-cover object-center outline-1 -outline-offset-1 outline-white/10"
+            />
           </div>
         </div>
       </section>
@@ -60,25 +67,7 @@ export default function AboutPage() {
             <div className="min-w-0 lg:col-span-3">
               <JourneyGlobe />
             </div>
-            <ol
-              role="list"
-              className="min-w-0 list-none lg:col-span-2"
-              aria-label="Places lived"
-            >
-              {JOURNEY_STOPS.map((stop) => (
-                <li
-                  key={`${stop.city}-${stop.label}`}
-                  className="flex flex-col gap-1 border-t border-white/12 py-5 first:border-t-0 first:pt-0"
-                >
-                  <h3 className="text-xl font-medium tracking-tight text-foreground">
-                    {stop.city}, {stop.country}
-                  </h3>
-                  <p className="text-base/7 text-pretty text-muted-foreground sm:text-sm/6">
-                    {stop.label}
-                  </p>
-                </li>
-              ))}
-            </ol>
+            <JourneyStops className="min-w-0 lg:col-span-2" />
           </div>
         </div>
       </section>

@@ -35,7 +35,7 @@ const Feature227 = ({ className }: Props) => {
       id="work"
       className={cn("scroll-mt-24 py-24 md:py-32", className)}
     >
-      <div className="grid w-full items-center gap-12 px-6 lg:grid-cols-2 lg:gap-16 lg:px-12">
+      <div className="grid w-full items-end gap-12 px-6 lg:grid-cols-2 lg:gap-16 lg:px-12">
         <div className="flex min-w-0 flex-col gap-8">
           <div className="flex flex-col gap-4">
             <p className="w-fit rounded-full border border-white/12 px-3.5 py-1.5 font-sans text-sm text-muted-foreground">
