@@ -20,53 +20,57 @@ const ProjectPipeline = ({ className }: Props) => {
           <p className="w-fit rounded-full border border-white/12 px-3.5 py-1.5 font-sans text-sm text-muted-foreground">
             03
           </p>
-          <div className="flex flex-col gap-4">
-            <h2 className="max-w-[20ch] text-4xl font-medium tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
-              Creative Pipeline
-            </h2>
-            <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
-              AI-generated content was taking off, and most of the conversation
-              around it felt like hype. My girlfriend runs a wellness brand
-              with regular sponsorship offers, so I had a real use case. Before
-              building anything for her, I wanted to understand every step
-              myself.
-            </p>
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+            <div className="flex min-w-0 flex-col gap-4">
+              <h2 className="max-w-[20ch] text-4xl font-medium tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
+                Creative Pipeline
+              </h2>
+              <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
+                AI-generated content was taking off, and most of the
+                conversation around it felt like hype. My girlfriend runs a
+                wellness brand with regular sponsorship offers, so I had a real
+                use case. Before building anything for her, I wanted to
+                understand every step myself.
+              </p>
+              <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
+                You give it a one-line premise. The system writes a
+                scene-by-scene script, produces voiceover per scene, generates
+                AI-animated clips, and assembles a finished video with
+                word-synced captions, ready to publish.
+              </p>
+              <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
+                Once I understood the pipeline, I adapted it for her brand. She
+                is producing and publishing AI-generated UGC at a pace that was
+                not realistic before. The value for me was a clear picture of
+                what AI content creation can actually do and where it falls
+                short.
+              </p>
+            </div>
+            <ol className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-6">
+              {STAGES.map((stage, index) => (
+                <li
+                  key={stage.title}
+                  className={cn(
+                    "flex min-w-0 flex-col gap-2 rounded-xl bg-glass p-4 inset-ring inset-ring-white/12",
+                    index < 2 ? "sm:col-span-3" : "sm:col-span-2"
+                  )}
+                >
+                  <p className="font-sans text-sm tabular-nums text-muted-foreground">
+                    0{index + 1}
+                  </p>
+                  <p className="font-sans text-base font-medium tracking-tight text-foreground sm:text-sm">
+                    {stage.title}
+                  </p>
+                  <p className="text-base/7 text-pretty text-muted-foreground sm:text-sm/6">
+                    {stage.detail}
+                  </p>
+                  <p className="mt-auto font-sans text-sm text-primary">
+                    {stage.tool}
+                  </p>
+                </li>
+              ))}
+            </ol>
           </div>
-        </div>
-        <ol className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
-          {STAGES.map((stage, index) => (
-            <li
-              key={stage.title}
-              className="relative flex min-w-0 flex-col gap-2 rounded-xl bg-glass p-4 inset-ring inset-ring-white/12"
-            >
-              <p className="font-sans text-sm tabular-nums text-muted-foreground">
-                0{index + 1}
-              </p>
-              <p className="font-sans text-base font-medium tracking-tight text-foreground sm:text-sm">
-                {stage.title}
-              </p>
-              <p className="text-base/7 text-pretty text-muted-foreground sm:text-sm/6">
-                {stage.detail}
-              </p>
-              <p className="mt-auto font-sans text-sm text-primary">
-                {stage.tool}
-              </p>
-            </li>
-          ))}
-        </ol>
-        <div className="grid items-start gap-6 lg:grid-cols-2 lg:gap-16">
-          <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
-            You give it a one-line premise. The system writes a scene-by-scene
-            script, produces voiceover per scene, generates AI-animated clips,
-            and assembles a finished video with word-synced captions, ready to
-            publish.
-          </p>
-          <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
-            Once I understood the pipeline, I adapted it for her brand. She is
-            producing and publishing AI-generated UGC at a pace that was not
-            realistic before. The value for me was a clear picture of what AI
-            content creation can actually do and where it falls short.
-          </p>
         </div>
       </div>
     </section>

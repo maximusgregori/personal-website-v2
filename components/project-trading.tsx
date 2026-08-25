@@ -70,44 +70,7 @@ const ProjectTrading = ({ className }: Props) => {
                   </div>
                 ))}
               </dl>
-              <div className="overflow-hidden rounded-xl bg-glass p-5 inset-ring inset-ring-white/12">
-                <p className="font-sans text-sm text-muted-foreground">
-                  NOAA ensemble fan
-                </p>
-                <svg
-                  viewBox="0 0 320 140"
-                  className="mt-4 h-36 w-full"
-                  aria-hidden="true"
-                >
-                  {[
-                    "M0 92 C80 88, 160 40, 320 18",
-                    "M0 92 C80 90, 160 58, 320 44",
-                    "M0 92 C80 92, 160 78, 320 70",
-                    "M0 92 C80 94, 160 98, 320 96",
-                    "M0 92 C80 96, 160 118, 320 122",
-                  ].map((d) => (
-                    <path
-                      key={d}
-                      d={d}
-                      fill="none"
-                      stroke="currentColor"
-                      className="text-foreground/20"
-                      strokeWidth="1.5"
-                    />
-                  ))}
-                  <path
-                    d="M0 92 C80 93, 160 86, 320 82"
-                    fill="none"
-                    stroke="var(--primary)"
-                    strokeWidth="2.5"
-                  />
-                </svg>
-                <p className="mt-2 text-base/7 text-pretty text-muted-foreground sm:text-sm/6">
-                  Ensemble members in, one probability out, before a trade
-                  fires.
-                </p>
-              </div>
-              <ol className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <ol className="grid grid-cols-2 gap-3">
                 {FLOW.map((step, index) => (
                   <li
                     key={step.title}

@@ -3,9 +3,9 @@ import { Camera, ImageIcon, Link2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const IMPORTS = [
-  { icon: Camera, label: "Photo", detail: "A handwritten card" },
-  { icon: Link2, label: "Link", detail: "Any recipe page" },
-  { icon: ImageIcon, label: "Screenshot", detail: "Saves and socials" },
+  { icon: Camera, label: "Photo", detail: "Any handwritten recipe" },
+  { icon: Link2, label: "Link", detail: "Any recipe website" },
+  { icon: ImageIcon, label: "Screenshot", detail: "Any saved recipe image" },
 ] as const;
 
 type Props = {
@@ -20,18 +20,18 @@ const ProjectBella = ({ className }: Props) => {
           <p className="w-fit rounded-full border border-white/12 px-3.5 py-1.5 font-sans text-sm text-muted-foreground">
             01
           </p>
-          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:gap-16">
             <div className="flex min-w-0 flex-col gap-4">
               <h2 className="max-w-[20ch] text-4xl font-medium tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
                 Bella
               </h2>
-              <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
+              <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
                 The two people in my life who cook the most had recipes saved
                 in a dozen different places. Handwritten notes, Instagram
                 saves, screenshots, bookmarked websites, physical cookbooks.
                 They could never find what they needed when they needed it.
               </p>
-              <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
+              <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
                 I built Bella, an AI-powered recipe manager for iOS, in Swift
                 and SwiftUI. You can import a recipe from anywhere: take a
                 photo of a handwritten card, paste a web link, or upload a
@@ -40,20 +40,11 @@ const ProjectBella = ({ className }: Props) => {
                 ads and filler. I had never done iOS development. I took it
                 from concept to the App Store.
               </p>
-              <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
+              <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
                 It is live on the App Store and used by my girlfriend, my mom,
                 their family, and friends.
               </p>
-            </div>
-            <div className="flex min-w-0 flex-col gap-4">
-              <div className="overflow-hidden rounded-xl bg-glass backdrop-blur-xl inset-ring inset-ring-white/12">
-                <img
-                  src="/projects/bella-app-store.webp"
-                  alt="Bella on the App Store, with recipe list, import, recipe detail, and meal planner screens"
-                  className="aspect-[6/5] w-full object-cover object-top outline-1 -outline-offset-1 outline-white/10"
-                />
-              </div>
-              <dl className="grid grid-cols-3 gap-3">
+              <dl className="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-3">
                 {IMPORTS.map((item) => (
                   <div
                     key={item.label}
@@ -69,6 +60,13 @@ const ProjectBella = ({ className }: Props) => {
                   </div>
                 ))}
               </dl>
+            </div>
+            <div className="overflow-hidden rounded-xl bg-glass backdrop-blur-xl inset-ring inset-ring-white/12">
+              <img
+                src="/projects/bella-app-store.webp"
+                alt="Bella on the App Store, with recipe list, import, recipe detail, and meal planner screens"
+                className="aspect-[6/5] w-full object-cover object-top outline-1 -outline-offset-1 outline-white/10"
+              />
             </div>
           </div>
         </div>
