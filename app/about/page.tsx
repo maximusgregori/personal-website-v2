@@ -49,7 +49,7 @@ export default function AboutPage() {
                 <img
                   src="/about/headshot.webp"
                   alt="Max Gregori"
-                  className="absolute top-[-32%] left-0 h-[148%] w-full rounded-xl object-cover object-top outline-1 -outline-offset-1 outline-white/10"
+                  className="absolute top-[-50%] left-0 h-[148%] w-full rounded-xl object-cover object-top outline-1 -outline-offset-1 outline-white/10"
                 />
               </div>
               <div className="relative min-h-0 overflow-hidden rounded-xl max-lg:aspect-[3/4] lg:h-full">
