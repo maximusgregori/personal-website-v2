@@ -15,8 +15,8 @@ export default function AboutPage() {
           <h1 className="max-w-[20ch] text-4xl font-medium tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
             About
           </h1>
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-stretch lg:gap-16">
-            <div className="flex min-w-0 w-full max-w-[48ch] flex-col gap-4">
+          <div className="flex flex-col gap-8 lg:grid lg:grid-cols-3 lg:items-stretch lg:gap-10">
+            <div className="flex min-w-0 flex-col gap-4">
               <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
                 A friend and I were in high school when we noticed that most web
                 design agencies wouldn't take on charities or small nonprofits.
@@ -44,12 +44,21 @@ export default function AboutPage() {
                 move.
               </p>
             </div>
-            <div className="relative w-full overflow-hidden rounded-xl max-lg:aspect-[3/4] lg:w-[24rem] lg:shrink-0 lg:self-stretch">
-              <img
-                src="/about/headshot.webp"
-                alt="Max Gregori"
-                className="absolute top-[-68%] left-0 h-[190%] w-full rounded-xl object-cover object-top outline-1 -outline-offset-1 outline-white/10"
-              />
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:contents">
+              <div className="relative min-h-0 overflow-hidden rounded-xl max-lg:aspect-[3/4] lg:h-full">
+                <img
+                  src="/about/headshot.webp"
+                  alt="Max Gregori"
+                  className="absolute top-[-68%] left-0 h-[190%] w-full rounded-xl object-cover object-top outline-1 -outline-offset-1 outline-white/10"
+                />
+              </div>
+              <div className="relative min-h-0 overflow-hidden rounded-xl max-lg:aspect-[3/4] lg:h-full">
+                <img
+                  src="/about/formula-one.webp"
+                  alt="Max Gregori at a Formula One race"
+                  className="absolute inset-0 size-full rounded-xl object-cover object-[center_20%] outline-1 -outline-offset-1 outline-white/10"
+                />
+              </div>
             </div>
           </div>
         </div>

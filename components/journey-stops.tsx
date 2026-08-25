@@ -1,7 +1,9 @@
 "use client";
 
-import { useCallback, useState, type UIEvent } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { useCallback, useRef, useState, type UIEvent } from "react";
 
+import { Button } from "@/components/ui/button";
 import { JOURNEY_STOPS } from "@/lib/journey";
 import { cn } from "@/lib/utils";
 
@@ -17,6 +19,7 @@ const MASK_END =
   "linear-gradient(to bottom, transparent, #fff 1.75rem, #fff 100%)";
 
 const JourneyStops = ({ className }: Props) => {
+  const scrollerRef = useRef<HTMLDivElement>(null);
   const [atTop, setAtTop] = useState(true);
   const [atBottom, setAtBottom] = useState(false);
 
@@ -25,6 +28,17 @@ const JourneyStops = ({ className }: Props) => {
     setAtTop(scrollTop <= 1);
     setAtBottom(scrollTop + clientHeight >= scrollHeight - 1);
   }, []);
+
+  const scrollByPage = (direction: 1 | -1) => {
+    const scroller = scrollerRef.current;
+    if (!scroller) {
+      return;
+    }
+    scroller.scrollBy({
+      top: direction * Math.round(scroller.clientHeight * 0.55),
+      behavior: "smooth",
+    });
+  };
 
   const maskImage = atTop ? MASK_REST : atBottom ? MASK_END : MASK_MID;
 
@@ -49,19 +63,46 @@ const JourneyStops = ({ className }: Props) => {
   return (
     <div className={cn(className)}>
       <div className="lg:hidden">{list}</div>
-      <div
-        onScroll={onScroll}
-        className="hidden h-[36rem] overflow-y-auto overscroll-contain lg:block [scrollbar-width:thin] [scrollbar-color:rgba(255,255,255,0.28)_transparent]"
-        style={{
-          maskImage,
-          WebkitMaskImage: maskImage,
-          maskSize: "100% 100%",
-          WebkitMaskSize: "100% 100%",
-          maskRepeat: "no-repeat",
-          WebkitMaskRepeat: "no-repeat",
-        }}
-      >
-        {list}
+      <div className="relative hidden h-[36rem] lg:block">
+        <div
+          ref={scrollerRef}
+          onScroll={onScroll}
+          className="h-full overflow-y-auto overscroll-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          style={{
+            maskImage,
+            WebkitMaskImage: maskImage,
+            maskSize: "100% 100%",
+            WebkitMaskSize: "100% 100%",
+            maskRepeat: "no-repeat",
+            WebkitMaskRepeat: "no-repeat",
+          }}
+        >
+          <div className="pb-14">{list}</div>
+        </div>
+        {!atTop ? (
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon-lg"
+            aria-label="Show previous cities"
+            onClick={() => scrollByPage(-1)}
+            className="absolute top-3 right-2 z-10 size-11 rounded-full bg-white/12 text-foreground backdrop-blur-xl inset-ring inset-ring-white/20 hover:bg-white/20"
+          >
+            <ChevronUp className="size-5" />
+          </Button>
+        ) : null}
+        {!atBottom ? (
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon-lg"
+            aria-label="Show more cities"
+            onClick={() => scrollByPage(1)}
+            className="absolute right-2 bottom-3 z-10 size-11 rounded-full bg-white/12 text-foreground backdrop-blur-xl inset-ring inset-ring-white/20 hover:bg-white/20"
+          >
+            <ChevronDown className="size-5" />
+          </Button>
+        ) : null}
       </div>
     </div>
   );

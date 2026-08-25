@@ -4,25 +4,21 @@ const SITES = [
   {
     href: "https://myhealthangel.com/",
     host: "myhealthangel.com",
-    title: "My Health Angel",
     src: "/chapters/my-health-angel.png",
   },
   {
     href: "https://clintonyoungfoundation.com/",
     host: "clintonyoungfoundation.com",
-    title: "Clinton Young Foundation",
     src: "/chapters/clinton-young.png?v=2",
   },
   {
     href: "https://suerockoriginals.com/",
     host: "suerockoriginals.com",
-    title: "Sue Rock Originals",
     src: "/chapters/sue-rock.png",
   },
   {
     href: "https://itsfromthesole.org/",
     host: "itsfromthesole.org",
-    title: "It's From The Sole",
     src: "/chapters/its-from-the-sole.png",
   },
 ] as const;
@@ -60,31 +56,27 @@ const Gallery48 = ({ className }: Props) => {
         <div className="@container">
           <div className="grid grid-cols-1 gap-4 @min-[36rem]:grid-cols-2 @min-[72rem]:grid-cols-4">
             {SITES.map((site) => (
-              <figure key={site.host} className="flex min-w-0 flex-col gap-3">
-                <a
-                  href={site.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="overflow-hidden rounded-xl bg-glass backdrop-blur-xl inset-ring inset-ring-white/12"
-                >
-                  <div className="flex h-9 items-center gap-2 border-b border-white/12 px-3 font-sans text-sm text-muted-foreground">
-                    <span aria-hidden className="flex items-center gap-1.5">
-                      <span className="size-2 rounded-full bg-[#FF5F57]" />
-                      <span className="size-2 rounded-full bg-[#FEBC2E]" />
-                      <span className="size-2 rounded-full bg-[#28C840]" />
-                    </span>
-                    <span className="min-w-0 truncate">{site.host}</span>
-                  </div>
-                  <img
-                    src={site.src}
-                    alt=""
-                    className="aspect-video w-full object-cover object-top outline-1 -outline-offset-1 outline-white/10"
-                  />
-                </a>
-                <figcaption className="px-1 font-sans text-base/7 text-muted-foreground sm:text-sm/6">
-                  {site.title}
-                </figcaption>
-              </figure>
+              <a
+                key={site.host}
+                href={site.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="min-w-0 overflow-hidden rounded-xl bg-glass backdrop-blur-xl inset-ring inset-ring-white/12"
+              >
+                <div className="flex h-9 items-center gap-2 border-b border-white/12 px-3 font-sans text-sm text-muted-foreground">
+                  <span aria-hidden className="flex items-center gap-1.5">
+                    <span className="size-2 rounded-full bg-[#FF5F57]" />
+                    <span className="size-2 rounded-full bg-[#FEBC2E]" />
+                    <span className="size-2 rounded-full bg-[#28C840]" />
+                  </span>
+                  <span className="min-w-0 truncate">{site.host}</span>
+                </div>
+                <img
+                  src={site.src}
+                  alt=""
+                  className="aspect-video w-full object-cover object-top outline-1 -outline-offset-1 outline-white/10"
+                />
+              </a>
             ))}
           </div>
         </div>
