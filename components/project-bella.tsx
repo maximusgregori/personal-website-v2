@@ -3,7 +3,7 @@ import { Camera, ImageIcon, Link2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const IMPORTS = [
-  { icon: Camera, label: "Photo", detail: "Any handwritten recipe" },
+  { icon: Camera, label: "Photograph", detail: "Any handwritten recipe" },
   { icon: Link2, label: "Link", detail: "Any recipe website" },
   { icon: ImageIcon, label: "Screenshot", detail: "Any saved recipe image" },
 ] as const;
