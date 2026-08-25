@@ -15,7 +15,7 @@ export default function AboutPage() {
           <h1 className="max-w-[20ch] text-4xl font-medium tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
             About
           </h1>
-          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-16">
             <div className="flex min-w-0 flex-col gap-4">
               <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
                 A friend and I were in high school when we noticed that most web
@@ -44,11 +44,13 @@ export default function AboutPage() {
                 move.
               </p>
             </div>
-            <img
-              src="/about/headshot.webp"
-              alt="Max Gregori"
-              className="aspect-[3/4] w-full rounded-xl object-cover object-center outline-1 -outline-offset-1 outline-white/10"
-            />
+            <div className="relative aspect-[3/4] min-h-0 overflow-hidden rounded-xl lg:aspect-auto lg:h-full">
+              <img
+                src="/about/headshot.webp"
+                alt="Max Gregori"
+                className="size-full rounded-xl object-cover object-center outline-1 -outline-offset-1 outline-white/10 lg:absolute lg:inset-0"
+              />
+            </div>
           </div>
         </div>
       </section>
