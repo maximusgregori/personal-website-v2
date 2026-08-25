@@ -22,8 +22,9 @@ import {
 } from "@/components/ai-elements/prompt-input";
 import { Suggestion } from "@/components/ai-elements/suggestion";
 import { ShineBorder } from "@/components/ui/shine-border";
+import { cn } from "@/lib/utils";
 
-import { CHIPS, FALLBACK_ANSWER, joinedAnswer } from "./copy";
+import { CHIPS, FALLBACK_ANSWER, GREETING, joinedAnswer } from "./copy";
 
 type ChatRole = "user" | "assistant";
 
@@ -31,6 +32,12 @@ type ChatMessage = {
   id: string;
   role: ChatRole;
   content: string;
+};
+
+const GREETING_MESSAGE: ChatMessage = {
+  id: "greeting",
+  role: "assistant",
+  content: GREETING,
 };
 
 const prefersReducedMotion = () =>
@@ -68,7 +75,7 @@ function AnswerBody({ content }: { content: string }) {
 }
 
 export function AskMaxChat() {
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState<ChatMessage[]>([GREETING_MESSAGE]);
   const [status, setStatus] = useState<"ready" | "streaming">("ready");
   const timerRef = useRef<number | null>(null);
   const inflightRef = useRef<{ id: string; answer: string } | null>(null);
@@ -180,7 +187,7 @@ export function AskMaxChat() {
   );
 
   return (
-    <div className="relative flex h-[min(58svh,36rem)] min-h-80 w-full min-w-0 flex-col overflow-hidden rounded-xl bg-glass backdrop-blur-xl inset-ring inset-ring-white/12 md:h-[min(70svh,36rem)] md:min-h-112 md:rounded-2xl">
+    <div className="relative flex h-[min(72svh,36rem)] min-h-96 w-full min-w-0 flex-col overflow-hidden rounded-xl bg-glass backdrop-blur-xl inset-ring inset-ring-white/12 md:h-[min(70svh,36rem)] md:min-h-112 md:rounded-2xl">
       <ShineBorder
         borderWidth={1}
         duration={14}
@@ -193,9 +200,6 @@ export function AskMaxChat() {
           <span className="size-2.5 rounded-full bg-[#28C840]" />
         </span>
       </div>
-      <p className="relative z-10 shrink-0 border-b border-white/12 px-4 py-3 text-base/7 text-muted-foreground sm:px-5 sm:text-sm/6">
-        What would you like to know about Max?
-      </p>
       <Conversation className="min-h-0">
         <ConversationContent className="gap-5 p-4 sm:p-5">
           {messages.map((message) => (
@@ -218,15 +222,18 @@ export function AskMaxChat() {
         </ConversationContent>
         <ConversationScrollButton />
       </Conversation>
-      <div className="relative z-10 flex flex-col gap-3 border-t border-white/8 p-3 sm:p-4">
-        <div className="flex flex-wrap gap-2">
-          {CHIPS.map((chip) => (
+      <div className="relative z-10 flex flex-col gap-2 border-t border-white/8 p-3 sm:gap-3 sm:p-4">
+        <div className="grid grid-cols-2 gap-2 md:flex md:flex-wrap">
+          {CHIPS.map((chip, index) => (
             <Suggestion
               key={chip.question}
               suggestion={chip.question}
               onClick={handleChip}
               variant="default"
-              className="h-auto max-w-full justify-start py-2 text-left whitespace-normal hover:bg-primary-press"
+              className={cn(
+                "h-auto max-w-full justify-start px-3 py-2 text-left whitespace-normal hover:bg-primary-press md:px-4",
+                index === 0 && "col-span-2"
+              )}
             />
           ))}
         </div>

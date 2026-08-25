@@ -72,7 +72,7 @@ const Hero76 = ({ className }: Props) => {
         aria-hidden
       />
       <div className="relative z-10 flex min-h-0 flex-1 items-center px-6 py-8 lg:px-12 lg:py-10">
-        <div className="grid w-full items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid w-full items-center gap-8 lg:grid-cols-2 lg:gap-16">
           <div className="relative z-10 flex min-w-0 flex-col justify-center gap-6 md:gap-8">
             <h1 className="max-w-[20ch] text-5xl font-medium tracking-tight text-balance text-foreground md:text-6xl lg:text-7xl">
               {HERO_NAME}

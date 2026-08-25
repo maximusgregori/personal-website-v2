@@ -4,15 +4,9 @@ export const HERO_LABELS = "Founder · Operator · Builder";
 export const FALLBACK_ANSWER =
   "Use one of the questions below.";
 
+export const GREETING = "What would you like to know about Max?";
+
 export const CHIPS = [
-  {
-    question: "What has Max founded?",
-    paragraphs: [
-      "Max has founded and co-founded a number of ventures. The first was in high school, with his friend Sebastian: a low-cost web design agency for nonprofits in New York City, because their budgets were too small for the existing players.",
-      "Max reconciled multiple government databases to index every 501(c) nonprofit across the five boroughs, evaluated their fit, called potential clients one by one, and pitched each one on a low-cost website.",
-      "Most recently he started Protea, which builds on his years in healthcare IT by automating healthcare technology delivery: the process of how operators and vendors procure, deliver, and manage their technology.",
-    ],
-  },
   {
     question: "What exceptional work has Max done?",
     paragraphs: [
@@ -20,6 +14,14 @@ export const CHIPS = [
       "When Max joined Integrity HIT as head of business development, the firm was primarily placing project managers and nursing informaticists into healthcare IT positions. Staff were already deeply embedded in healthcare operations, and Max saw a way to expand the service lines, especially where clinics wanted someone on site.",
       "He built the line from there: hiring technicians city by city, pitching the work himself to existing customers and then to new ones, and handling many of the early jobs himself. Once it had grown, he automated intake, scheduling, and invoicing through an AI agent orchestrator so the client experience could keep up.",
       "The client base went from three healthcare operators to eight of the largest MSOs in the country. Revenue doubled in the lower millions, and they delivered on-site services at over 100 sites.",
+    ],
+  },
+  {
+    question: "What has Max founded?",
+    paragraphs: [
+      "Max has founded and co-founded a number of ventures. The first was in high school, with his friend Sebastian: a low-cost web design agency for nonprofits in New York City, because their budgets were too small for the existing players.",
+      "Max reconciled multiple government databases to index every 501(c) nonprofit across the five boroughs, evaluated their fit, called potential clients one by one, and pitched each one on a low-cost website.",
+      "Most recently he started Protea, which builds on his years in healthcare IT by automating healthcare technology delivery: the process of how operators and vendors procure, deliver, and manage their technology.",
     ],
   },
   {
