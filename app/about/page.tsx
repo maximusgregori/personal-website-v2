@@ -49,14 +49,14 @@ export default function AboutPage() {
                 <img
                   src="/about/headshot.webp"
                   alt="Max Gregori"
-                  className="absolute top-[-68%] left-0 h-[190%] w-full rounded-xl object-cover object-top outline-1 -outline-offset-1 outline-white/10"
+                  className="absolute top-[-32%] left-0 h-[148%] w-full rounded-xl object-cover object-top outline-1 -outline-offset-1 outline-white/10"
                 />
               </div>
               <div className="relative min-h-0 overflow-hidden rounded-xl max-lg:aspect-[3/4] lg:h-full">
                 <img
                   src="/about/formula-one.webp"
                   alt="Max Gregori at a Formula One race"
-                  className="absolute inset-0 size-full rounded-xl object-cover object-[center_20%] outline-1 -outline-offset-1 outline-white/10"
+                  className="absolute top-[-30%] left-0 h-[165%] w-full rounded-xl object-cover object-top outline-1 -outline-offset-1 outline-white/10"
                 />
               </div>
             </div>
