@@ -10,6 +10,7 @@ const ITEMS = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
   { label: "About", href: "/about" },
+  { label: "Media", href: "/media" },
 ];
 
 interface Navbar6Props {
@@ -23,7 +24,7 @@ const Navbar6 = ({ className }: Navbar6Props) => {
   return (
     <section
       className={cn(
-        "absolute top-5 left-1/2 z-50 w-[min(94%,44rem)] -translate-x-1/2 rounded-full border border-white/12 bg-glass backdrop-blur-md lg:top-8",
+        "absolute top-5 left-1/2 z-50 w-[min(94%,48rem)] -translate-x-1/2 rounded-full border border-white/12 bg-glass backdrop-blur-md lg:top-8",
         className
       )}
     >
