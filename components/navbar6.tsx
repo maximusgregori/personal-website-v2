@@ -10,7 +10,7 @@ const ITEMS = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
   { label: "About", href: "/about" },
-  { label: "Media", href: "/media" },
+  { label: "Talks", href: "/talks" },
 ];
 
 interface Navbar6Props {

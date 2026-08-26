@@ -27,7 +27,7 @@ const LINKS = [
   { name: "Home", href: "/" },
   { name: "Projects", href: "/projects" },
   { name: "About", href: "/about" },
-  { name: "Media", href: "/media" },
+  { name: "Talks", href: "/talks" },
 ] as const;
 
 const SOCIALS = [
