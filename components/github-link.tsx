@@ -6,9 +6,10 @@ type Props = {
   href: string;
   label: string;
   className?: string;
+  size?: "sm" | "md";
 };
 
-const GitHubLink = ({ href, label, className }: Props) => {
+const GitHubLink = ({ href, label, className, size = "md" }: Props) => {
   return (
     <a
       href={href}
@@ -24,7 +25,10 @@ const GitHubLink = ({ href, label, className }: Props) => {
       <svg
         role="img"
         viewBox="0 0 24 24"
-        className="size-6 shrink-0 fill-muted-foreground hover:fill-foreground"
+        className={cn(
+          "shrink-0 fill-muted-foreground hover:fill-foreground",
+          size === "sm" ? "size-5" : "size-6"
+        )}
       >
         <title>GitHub</title>
         <path d={siGithub.path} />

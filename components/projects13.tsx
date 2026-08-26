@@ -64,6 +64,7 @@ const Projects13 = ({ className, headingAs: HeadingTag = "h2" }: Props) => {
                       <GitHubLink
                         href={project.repo}
                         label={`${project.title} on GitHub`}
+                        size="sm"
                       />
                     ) : null}
                   </div>
