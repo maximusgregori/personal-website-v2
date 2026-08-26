@@ -45,7 +45,7 @@ const Projects13 = ({ className, headingAs: HeadingTag = "h2" }: Props) => {
           {PROJECTS.map((project) => (
             <li
               key={project.number}
-              className="border-b border-white/12 first:pt-0 lg:first:pt-0"
+              className="border-b border-white/12 last:border-b-0"
             >
               <Link
                 href={project.href}
