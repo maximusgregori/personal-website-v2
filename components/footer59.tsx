@@ -26,8 +26,8 @@ function BrandMark({ path, title }: { path: string; title: string }) {
 const LINKS = [
   { name: "Home", href: "/" },
   { name: "Projects", href: "/projects" },
-  { name: "About", href: "/about" },
   { name: "Talks", href: "/talks" },
+  { name: "About", href: "/about" },
 ] as const;
 
 const SOCIALS = [

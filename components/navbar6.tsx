@@ -9,8 +9,8 @@ import { cn } from "@/lib/utils";
 const ITEMS = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
-  { label: "About", href: "/about" },
   { label: "Talks", href: "/talks" },
+  { label: "About", href: "/about" },
 ];
 
 interface Navbar6Props {
@@ -24,7 +24,7 @@ const Navbar6 = ({ className }: Navbar6Props) => {
   return (
     <section
       className={cn(
-        "absolute top-5 left-1/2 z-50 w-[min(94%,48rem)] -translate-x-1/2 rounded-full border border-white/12 bg-glass backdrop-blur-md lg:top-8",
+        "absolute top-5 left-1/2 z-50 w-[min(94%,48rem)] -translate-x-1/2 rounded-full border border-white/12 bg-background/90 backdrop-blur-xl lg:top-8 lg:bg-glass lg:backdrop-blur-md",
         className
       )}
     >
@@ -84,7 +84,7 @@ const Navbar6 = ({ className }: Navbar6Props) => {
 
       <div
         className={cn(
-          "absolute inset-x-0 top-[calc(100%+0.75rem)] flex flex-col rounded-2xl border border-white/12 bg-background/80 p-5 backdrop-blur-md lg:hidden",
+          "absolute inset-x-0 top-[calc(100%+0.75rem)] flex flex-col rounded-2xl border border-white/12 bg-background p-5 lg:hidden",
           isMenuOpen
             ? "visible translate-y-0 opacity-100"
             : "invisible -translate-y-4 opacity-0"
