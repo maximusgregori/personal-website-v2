@@ -46,7 +46,7 @@ const Feature227 = ({ className }: Props) => {
             </h2>
             <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
               I started in tech as a growth intern at LotusFlare in San Jose.
-              It is an AI-powered digital commerce and monetization platform
+              It's an AI-powered digital commerce and monetization platform
               for global telecommunications and media service providers.
             </p>
           </div>
