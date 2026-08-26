@@ -1,3 +1,4 @@
+import { GitHubLink } from "@/components/github-link";
 import { cn } from "@/lib/utils";
 
 const STATS = [
@@ -29,9 +30,15 @@ const ProjectTrading = ({ className }: Props) => {
           </p>
           <div className="grid items-start gap-10 lg:grid-cols-2 lg:items-end lg:gap-16">
             <div className="flex min-w-0 flex-col gap-4">
-              <h2 className="max-w-[20ch] text-4xl font-medium tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
-                Trading Bot
-              </h2>
+              <div className="flex items-baseline gap-3">
+                <h2 className="max-w-[20ch] text-4xl font-medium tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
+                  Trading Bot
+                </h2>
+                <GitHubLink
+                  href="https://github.com/maximusgregori/weather-bot"
+                  label="Trading Bot on GitHub"
+                />
+              </div>
               <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
                 Prediction markets were taking off and people were claiming you
                 could set up a trading bot overnight. That did not add up to

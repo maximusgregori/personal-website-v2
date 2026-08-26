@@ -1,5 +1,6 @@
 import { Camera, ImageIcon, Link2 } from "lucide-react";
 
+import { GitHubLink } from "@/components/github-link";
 import { cn } from "@/lib/utils";
 
 const IMPORTS = [
@@ -24,9 +25,15 @@ const ProjectBella = ({ className }: Props) => {
         </p>
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-16">
           <div className="flex min-w-0 flex-col gap-4">
-            <h2 className="max-w-[20ch] text-4xl font-medium tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
-              Bella
-            </h2>
+            <div className="flex items-baseline gap-3">
+              <h2 className="max-w-[20ch] text-4xl font-medium tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
+                Bella
+              </h2>
+              <GitHubLink
+                href="https://github.com/maximusgregori/Bella"
+                label="Bella on GitHub"
+              />
+            </div>
             <p className="max-w-[48ch] text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
               The two people in my life who cook the most had recipes saved in
               a dozen different places. Handwritten notes, Instagram saves,
