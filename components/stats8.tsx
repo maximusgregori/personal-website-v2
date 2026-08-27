@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 const STATS = [
   { value: "250+", label: "Projects directed" },
-  { value: "500+", label: "Surgery centers" },
+  { value: "200+", label: "Surgery centers covered" },
   { value: "60+", label: "Clinical go-lives" },
   { value: "40%", label: "Faster approvals" },
 ] as const;
@@ -48,7 +48,7 @@ const Stats8 = ({ className }: Props) => {
                 <dt className="font-display text-5xl font-medium tracking-tight tabular-nums text-foreground md:text-6xl">
                   {stat.value}
                 </dt>
-                <dd className="truncate font-sans text-base/7 text-muted-foreground sm:text-sm/6">
+                <dd className="font-sans text-base/7 text-pretty text-muted-foreground sm:text-sm/6">
                   {stat.label}
                 </dd>
               </div>

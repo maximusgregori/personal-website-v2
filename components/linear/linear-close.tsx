@@ -49,6 +49,13 @@ export function LinearClose({ className }: Props) {
           </Link>
           <span className="text-muted-foreground"> · </span>
           <Link
+            href="/recommendations"
+            className="text-foreground underline-offset-4 hover:underline"
+          >
+            Recommendations
+          </Link>
+          <span className="text-muted-foreground"> · </span>
+          <Link
             href="/about"
             className="text-foreground underline-offset-4 hover:underline"
           >
