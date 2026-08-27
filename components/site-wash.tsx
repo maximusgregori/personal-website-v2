@@ -1,8 +1,11 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 export function SiteWash() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -30,6 +33,10 @@ export function SiteWash() {
       reduce.removeEventListener("change", onScroll);
     };
   }, []);
+
+  if (pathname.startsWith("/linear")) {
+    return null;
+  }
 
   return (
     <div

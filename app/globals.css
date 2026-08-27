@@ -158,6 +158,30 @@
   --shadow-2xl: 0 0 #0000;
 }
 
+.linear-route {
+  --background: #08090a;
+  --foreground: #f7f8f8;
+  --muted-foreground: #8a8f98;
+  --primary: #ffffff;
+  --primary-foreground: #08090a;
+  --border: rgb(255 255 255 / 10%);
+  --card: #08090a;
+  --glass: rgb(255 255 255 / 6%);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-text: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+.linear-route,
+.linear-route h1,
+.linear-route h2,
+.linear-route h3,
+.linear-route h4,
+.linear-route h5,
+.linear-route h6 {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
