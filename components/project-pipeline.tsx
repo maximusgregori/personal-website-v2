@@ -19,12 +19,11 @@ const ProjectPipeline = ({ className }: Props) => {
       className={cn("scroll-mt-24 py-24 md:py-32", className)}
     >
       <div className="flex w-full flex-col gap-10 px-6 lg:gap-12 lg:px-12">
-        <div className="flex flex-col gap-4">
-          <p className="w-fit rounded-full border border-white/12 px-3.5 py-1.5 font-sans text-sm text-muted-foreground">
-            03
-          </p>
-          <div className="grid items-start gap-10 lg:grid-cols-2 lg:items-end lg:gap-16">
+        <div className="grid items-start gap-10 lg:grid-cols-2 lg:items-end lg:gap-16">
             <div className="flex min-w-0 flex-col gap-4">
+              <p className="w-fit rounded-full border border-white/12 px-3.5 py-1.5 font-sans text-sm text-muted-foreground">
+                03
+              </p>
               <h2 className="max-w-[20ch] text-4xl font-medium tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
                 Creative Pipeline
               </h2>
@@ -66,7 +65,6 @@ const ProjectPipeline = ({ className }: Props) => {
                 </li>
               ))}
             </ol>
-          </div>
         </div>
       </div>
     </section>

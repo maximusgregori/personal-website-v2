@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const IMPORTS = [
   { icon: Camera, label: "Photograph", detail: "Any handwritten recipe" },
   { icon: Link2, label: "Link", detail: "Any recipe website" },
-  { icon: ImageIcon, label: "Screenshot", detail: "Any saved recipe image" },
+  { icon: ImageIcon, label: "Any social media recipes", detail: "Any saved recipe image" },
 ] as const;
 
 type Props = {
@@ -20,11 +20,11 @@ const ProjectBella = ({ className }: Props) => {
       className={cn("scroll-mt-24 py-24 md:py-32", className)}
     >
       <div className="flex w-full flex-col gap-10 px-6 lg:gap-12 lg:px-12">
-        <p className="w-fit rounded-full border border-white/12 px-3.5 py-1.5 font-sans text-sm text-muted-foreground">
-          01
-        </p>
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-16">
           <div className="flex min-w-0 flex-col gap-4">
+            <p className="w-fit rounded-full border border-white/12 px-3.5 py-1.5 font-sans text-sm text-muted-foreground">
+              01
+            </p>
             <div className="flex items-baseline gap-3">
               <h2 className="max-w-[20ch] text-4xl font-medium tracking-tight text-balance text-foreground md:text-5xl lg:text-6xl">
                 Bella

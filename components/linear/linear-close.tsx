@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -25,42 +23,6 @@ export function LinearClose({ className }: Props) {
             max.c.gregori@gmail.com
           </a>
           . The rest of my site contains more details on my background.
-        </p>
-        <p className="text-base sm:text-sm">
-          <Link
-            href="/"
-            className="text-foreground underline-offset-4 hover:underline"
-          >
-            Home
-          </Link>
-          <span className="text-muted-foreground"> · </span>
-          <Link
-            href="/projects"
-            className="text-foreground underline-offset-4 hover:underline"
-          >
-            Projects
-          </Link>
-          <span className="text-muted-foreground"> · </span>
-          <Link
-            href="/talks"
-            className="text-foreground underline-offset-4 hover:underline"
-          >
-            Talks
-          </Link>
-          <span className="text-muted-foreground"> · </span>
-          <Link
-            href="/recommendations"
-            className="text-foreground underline-offset-4 hover:underline"
-          >
-            Recommendations
-          </Link>
-          <span className="text-muted-foreground"> · </span>
-          <Link
-            href="/about"
-            className="text-foreground underline-offset-4 hover:underline"
-          >
-            About
-          </Link>
         </p>
       </div>
     </section>
