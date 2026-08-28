@@ -21,6 +21,26 @@ const SITES = [
     host: "itsfromthesole.org",
     src: "/chapters/its-from-the-sole.png",
   },
+  {
+    href: "https://kalterra.com/",
+    host: "kalterra.com",
+    src: "/chapters/kalterra-home.png",
+  },
+  {
+    href: "https://slxdevelopment.com/",
+    host: "slxdevelopment.com",
+    src: "/chapters/slx-development.png",
+  },
+  {
+    href: "https://slxcap.com/",
+    host: "slxcap.com",
+    src: "/chapters/slx-cap.png",
+  },
+  {
+    href: "https://annapond.com/",
+    host: "annapond.com",
+    src: "/chapters/anna-pond.png",
+  },
 ] as const;
 
 type Props = {
@@ -42,13 +62,14 @@ const Gallery48 = ({ className }: Props) => {
             <div className="flex flex-col gap-4">
               <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
                 After a year at LotusFlare I was eager to start a venture of my
-                own, so I co-founded Icarus Labs, a web design agency for New
-                York City nonprofits that couldn't afford the existing shops.
+                own, so I co-founded Icarus Labs, a digital marketing and web
+                development agency for New York City nonprofits that couldn't
+                afford the existing shops.
               </p>
               <p className="text-lg/8 text-pretty text-muted-foreground sm:text-base/7">
                 I acquired and managed more than 30 clients across nonprofit,
-                e-commerce, and real estate. A few of the sites we built are
-                below.
+                e-commerce, and real estate. A selection of the sites we built,
+                grew, and maintained are below.
               </p>
             </div>
           </div>
