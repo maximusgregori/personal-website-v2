@@ -35,7 +35,7 @@ const Feature227 = ({ className }: Props) => {
       id="work"
       className={cn("scroll-mt-24 py-24 md:py-32", className)}
     >
-      <div className="grid w-full items-start gap-12 px-6 lg:grid-cols-2 lg:gap-16 lg:px-12">
+      <div className="grid w-full items-start gap-12 px-6 lg:grid-cols-2 lg:items-stretch lg:gap-16 lg:px-12">
         <div className="flex min-w-0 flex-col gap-8">
           <div className="flex flex-col gap-4">
             <p className="w-fit rounded-full border border-white/12 px-3.5 py-1.5 font-sans text-sm text-muted-foreground">
@@ -67,14 +67,14 @@ const Feature227 = ({ className }: Props) => {
             ))}
           </dl>
         </div>
-        <div className="min-w-0 max-w-lg">
+        <div className="min-w-0">
           <a
             href="https://lotusflare.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="block overflow-hidden rounded-xl bg-glass backdrop-blur-xl inset-ring inset-ring-white/12"
+            className="flex h-full min-h-0 flex-col overflow-hidden rounded-xl bg-glass backdrop-blur-xl inset-ring inset-ring-white/12"
           >
-            <div className="flex h-9 items-center gap-2 border-b border-white/12 px-4">
+            <div className="flex h-9 shrink-0 items-center gap-2 border-b border-white/12 px-4">
               <span aria-hidden className="flex items-center gap-2">
                 <span className="size-2.5 rounded-full bg-[#FF5F57]" />
                 <span className="size-2.5 rounded-full bg-[#FEBC2E]" />
@@ -84,11 +84,13 @@ const Feature227 = ({ className }: Props) => {
                 lotusflare.com
               </span>
             </div>
-            <img
-              src="/chapters/lotusflare-home.png"
-              alt=""
-              className="aspect-video w-full object-cover object-top outline-1 -outline-offset-1 outline-white/10"
-            />
+            <div className="relative min-h-0 w-full flex-1 overflow-hidden max-lg:aspect-video">
+              <img
+                src="/chapters/lotusflare-home.png"
+                alt=""
+                className="absolute inset-0 size-full object-cover object-top outline-1 -outline-offset-1 outline-white/10"
+              />
+            </div>
           </a>
         </div>
       </div>

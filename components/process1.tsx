@@ -40,8 +40,8 @@ type Props = {
 const Process1 = ({ className }: Props) => {
   return (
     <section className={cn("scroll-mt-24 py-24 md:py-32", className)}>
-      <div className="grid w-full grid-cols-1 items-start gap-12 px-6 lg:grid-cols-5 lg:gap-16 lg:px-12">
-        <div className="flex min-w-0 flex-col gap-8 lg:col-span-2">
+      <div className="grid w-full grid-cols-1 items-start gap-12 px-6 lg:grid-cols-5 lg:items-stretch lg:gap-16 lg:px-12">
+        <div className="flex min-h-0 min-w-0 flex-col gap-8 lg:col-span-2">
           <div className="flex flex-col gap-4">
             <p className="w-fit rounded-full border border-white/12 px-3.5 py-1.5 font-sans text-sm text-muted-foreground">
               Chapter 04
@@ -64,9 +64,9 @@ const Process1 = ({ className }: Props) => {
             href="https://integrityhit.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="max-w-lg overflow-hidden rounded-xl bg-glass backdrop-blur-xl inset-ring inset-ring-white/12"
+            className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-xl bg-glass backdrop-blur-xl inset-ring inset-ring-white/12 max-lg:flex-none"
           >
-            <div className="flex h-9 items-center gap-2 border-b border-white/12 px-3 font-sans text-sm text-muted-foreground">
+            <div className="flex h-9 shrink-0 items-center gap-2 border-b border-white/12 px-3 font-sans text-sm text-muted-foreground">
               <span aria-hidden className="flex items-center gap-1.5">
                 <span className="size-2 rounded-full bg-[#FF5F57]" />
                 <span className="size-2 rounded-full bg-[#FEBC2E]" />
@@ -74,11 +74,13 @@ const Process1 = ({ className }: Props) => {
               </span>
               <span className="min-w-0 truncate">integrityhit.com</span>
             </div>
-            <img
-              src="/chapters/integrity-home.png"
-              alt=""
-              className="aspect-video w-full object-cover object-top outline-1 -outline-offset-1 outline-white/10"
-            />
+            <div className="relative min-h-0 w-full flex-1 overflow-hidden max-lg:aspect-video">
+              <img
+                src="/chapters/integrity-home.png"
+                alt=""
+                className="absolute inset-0 size-full object-cover object-top outline-1 -outline-offset-1 outline-white/10"
+              />
+            </div>
           </a>
         </div>
         <ol className="min-w-0 list-none lg:col-span-3">
