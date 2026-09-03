@@ -3,15 +3,15 @@ import { cn } from "@/lib/utils";
 const TILES = [
   {
     title: "SCA Health",
-    body: "The second-largest operator of outpatient surgery centers in the US. I was the technical project manager for their IT implementations and ran more than 250 IT projects across more than 200 of their facilities.",
+    body: "The second-largest operator of outpatient surgery centers in the US, owned by UnitedHealth Group. I directed 100+ clinical system implementations across their network of 700+ facilities.",
   },
   {
     title: "Integrity Healthcare IT Solutions",
-    body: "A provider of IT solutions for outpatient healthcare. As Director of Business Development, I grew the company from three to eight clients and doubled revenue in the lower millions. I still owned rollouts from kickoff through go-live.",
+    body: "A provider of IT solutions for outpatient healthcare. As Director of IT Services I led software implementations for health systems with 10k+ clinicians.",
   },
   {
     title: "Protea",
-    body: "After running healthcare technology implementations by hand for years, I founded Protea to make them faster, cheaper, and more efficient. It's the system of record I wished I'd had on every rollout: a self-maintaining single source of truth.",
+    body: "Over time I began automating my implementation work. I packaged that infrastructure as Protea and sold it to the same customers that for years had paid me to do it by hand.",
   },
 ] as const;
 

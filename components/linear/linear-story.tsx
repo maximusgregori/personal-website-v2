@@ -7,7 +7,7 @@ const PROBLEMS = [
   },
   {
     title: "International coordination",
-    body: "MediReport's engineering sat in Paris while their support sat in Zadar, Croatia. The customer was also spread across several time zones. Successful implementation meant continuously coordinating with all three parties.",
+    body: "Every customer sat across time zones. I coordinated clinical groups, customer IT, third-party vendors, and MediReport's engineering teams across Europe.",
   },
   {
     title: "A new system",
@@ -15,7 +15,7 @@ const PROBLEMS = [
   },
   {
     title: "No established process",
-    body: "In the US, there was no existing implementation process I could reference. The European playbook didn't fit the US product.",
+    body: "In the US there was no existing implementation, customer success, or customer support process I could reference.",
   },
 ] as const;
 
@@ -38,7 +38,7 @@ const STEPS = [
   {
     id: "04",
     title: "Go-live and support",
-    body: "I flew on-site for every go-live and created a hypercare support system for the first 30 days after launch, with adoption tracking and rapid issue triage.",
+    body: "I flew on-site for every go-live. I stood up hypercare for the first 30 days, then a long-term support system after that.",
   },
 ] as const;
 
@@ -58,11 +58,11 @@ export function LinearStory({ className }: Props) {
             Allow me to demonstrate.
           </h2>
           <p className="mt-4 max-w-[52ch] text-lg text-pretty text-muted-foreground sm:text-base">
-            MediReport is a French company that sells software for heart and
-            vascular clinics. They had heard about my expertise with
-            implementation management, so they asked me to help them establish a
-            foothold in the US. I helped win their first American customer and
-            owned the implementations.
+            MediReport is a French SaaS company that sells software for heart
+            and vascular clinics. They approached me to help them establish a
+            foothold in the US. I landed them their first enterprise customer
+            in the US, owned the implementations, and built the US
+            implementation system from nothing.
           </p>
         </div>
 

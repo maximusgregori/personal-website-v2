@@ -4,7 +4,7 @@ const ROWS = [
   {
     ask: "A track record of multi-workstream, multi-stakeholder enterprise rollouts, including 1,000+ user deployments.",
     proof:
-      "At SCA Health I directed more than 250 IT implementations across more than 200 facilities. At Integrity I led EHR implementations for major hospital systems with more than a thousand clinicians.",
+      "At SCA Health I directed 100+ clinical system implementations across 700+ facilities. At Integrity I led software implementations for health systems with 10k+ clinicians.",
   },
   {
     ask: "Own end-to-end implementation plans: timeline, milestones, dependencies, risk, and stakeholder accountability.",
@@ -14,7 +14,7 @@ const ROWS = [
   {
     ask: "Coordinate technical and non-technical teams without owning the technical execution yourself.",
     proof:
-      "On SCA implementations I coordinated local IT, network engineers, and interface engineers from the customer and from vendors. I translated that work for nurses, physicians, and other on-site staff.",
+      "I coordinated clinical groups, customer IT, third-party vendors, and MediReport's engineering teams across Europe, and translated that work for nurses and physicians on site.",
   },
   {
     ask: "Strong executive communication: a steering committee, a VP-level status update, and a customer IT admin in the same day.",
@@ -29,7 +29,7 @@ const ROWS = [
   {
     ask: "Own go-live execution and the first 30 days after launch.",
     proof:
-      "I've built automated feedback loops to track customer satisfaction after go-live and folded that feedback back into the implementation playbook.",
+      "I flew on-site for every go-live, ran hypercare for the first 30 days, and stood up long-term support after that.",
   },
   {
     ask: "Define and enforce services scope before kickoff: deliverables, hours, and boundaries.",

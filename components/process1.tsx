@@ -64,7 +64,7 @@ const Process1 = ({ className }: Props) => {
             href="https://integrityhit.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="overflow-hidden rounded-xl bg-glass backdrop-blur-xl inset-ring inset-ring-white/12"
+            className="max-w-lg overflow-hidden rounded-xl bg-glass backdrop-blur-xl inset-ring inset-ring-white/12"
           >
             <div className="flex h-9 items-center gap-2 border-b border-white/12 px-3 font-sans text-sm text-muted-foreground">
               <span aria-hidden className="flex items-center gap-1.5">
